@@ -1,0 +1,14 @@
+---
+export interface Props {
+    titulo: string;
+    img: string;
+    web: string;
+}
+const { web, img, titulo} = Astro.props
+---
+
+<div class="bg-white p-1 rounded-full">
+    <a href={web}>
+        <img src={img} alt={titulo} class="w-10 rounded-full">
+    </a>
+</div>
