@@ -6,7 +6,7 @@ export interface Props {
 }
 const { titulo, img, web } = Astro.props
 
-const backgroundImage = `url(${img})`
+const backgroundImage = `url(/${img})`
 ---
 <style define:vars={{backgroundImage}}>
     .img-background{
