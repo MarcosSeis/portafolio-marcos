@@ -10,6 +10,15 @@ const backgroundImage = `url(/${img})`
 ---
 <style define:vars={{backgroundImage}}>
     .img-background{
+        background-image: linear-gradient(to right, rgb(0 0 0/ .65), rgb( 0 0 0 /0.85)), var(--backgroundImage);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: 1s;  
+    }
+
+   @media (min-width: 768px){
+    .img-background{
         background-image: var(--backgroundImage);
         background-position: center;
         background-repeat: no-repeat;
@@ -21,16 +30,17 @@ const backgroundImage = `url(/${img})`
         background-color: #131313;
         background-position: top;
     }
+   }
 
 </style>
 
 <div>
     <section class="img-background mb-6 rounded-md py-15">
         <div class="py-20 group">
-            <div class="px-2 invisible group-hover:visible">
+            <div class="px-2 lg:invisible lg:group-hover:visible">
                 <h2 class="text-white font-semibold ">{titulo}</h2>
             </div>
-            <div class="mt-5 invisible group-hover:visible">
+            <div class="mt-5 lg:invisible lg:group-hover:visible">
                 <a href={web}>
                     <button class="bg-transparent hover:bg-gray-100 text-gray-100 font-semibold hover:text-black py-2 px-4 border border-gray-100 hover:border-transparent rounded">
                         Visitalo
